@@ -1,0 +1,29 @@
+services:
+  server:
+    build:
+      context: .
+      args:
+        COPY_FILE_1: server.py
+        COPY_FILE_2: server.crt
+        COPY_FILE_3: server.key
+    command: ["python3.4", "server.py"]
+    ports:
+      - "8000:8000"
+    networks:
+      - TLS_1.0
+
+  client:
+    build:
+      context: .
+      args:
+        COPY_FILE_1: client.py
+        COPY_FILE_2: client.py
+        COPY_FILE_3: client.py
+    command: ["bash", "-c", "while true; do sleep 1000; done"]  # Keep client alive
+    depends_on:
+      - server
+    networks:
+      - TLS_1.0
+
+networks:
+  TLS_1.0:
