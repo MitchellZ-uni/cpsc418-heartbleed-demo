@@ -27,5 +27,5 @@ def heartbleed_exploit(target, port=443):
         print(f"[-] Error: {e}")
 
 # Test against a target
-target = "127.0.0.1"
+target = "server"
 heartbleed_exploit(target, 8000)
