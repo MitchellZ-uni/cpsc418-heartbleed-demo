@@ -1,2 +1,4 @@
 *.key
 *.crt
+hb-certs
+python_package_dependencies

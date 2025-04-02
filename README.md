@@ -21,3 +21,6 @@ We will Python `3.4.10` combining with OpenSSL `1.0.1f` to create a HTTPS web se
 
 ## Check TLS 1
 When the client is running, execute ``openssl s_client -connect server:8000 -tls1`` in client container to verify the TLS status of the server
+
+## Heartbleed Attack
+In order to execute the attack from within the client server, run ``python3.4 client.py``
