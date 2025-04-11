@@ -46,8 +46,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         </head>
 
         <body>
-            <h1>Welcome to the TLS 1.0 HTTPS Example</h1>
-            <p>This page is served over a secure HTTPS connection using TLS 1.0 protocol.</p>
+            <h1>TLS 1.0 HTTPS Server</h1>
             <form action="/" method="post">
                 <input type="text" name="message" placeholder="Enter a message">
                 <button type="submit">Send</button>
