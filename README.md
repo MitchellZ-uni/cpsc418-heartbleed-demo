@@ -23,9 +23,7 @@ We will Python `3.4.10` combining with OpenSSL `1.0.1f` to create a HTTPS web se
     - Click ``Advanced...`` and ``Accept and Risk and Continue``
 
 ## (Optional) Verify TLS 1.0 Server
-When the server is running,
-- Execute ``openssl s_client -connect server:8000 -tls1`` in the **client container**, or
-- Execute ``openssl s_client -connect localhost:8000 -tls1`` on your own machine
+When the server is running, execute ``openssl s_client -connect server:8000 -tls1`` in the **client container** terminal
 
 
 ## Heartbleed Attack
