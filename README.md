@@ -17,7 +17,7 @@ We will Python `3.4.10` combining with OpenSSL `1.0.1f` to create a HTTPS web se
 
 ## View TLS 1.0 Website using FireFox
 1. Ensure FireFox accepts TLS 1.0 connection
-    - Go go ``about:config``
+    - Type ``about:config`` in the URL bar
     - Set ``security.tls.version.min`` to ``1``
 2. Go to ``https://localhost:8000/`` and accept the self-signed certificate
     - Click ``Advanced...`` and ``Accept and Risk and Continue``
@@ -27,16 +27,16 @@ When the server is running, execute ``openssl s_client -connect server:8000 -tls
 
 
 ## Heartbleed Attack
-In order to execute the Heartbleed attack from the client server, please follow the steps:
+In order to execute the Heartbleed attack from the client container, please follow the steps:
 1. Make sure the compose container is running
     - Refer to the section above **Build Server via Docker**
-2. Go to the Docker Desktop application, find the container ``client-1`` under the compose container ``tls_1_https``
+2. Go to the Docker Desktop application, and find the container ``client-1`` under the compose container ``tls_1_https``
 3. Click on the three dots on the right, choose ``>_ Open in terminal``
 4. Run ``python3.4 client.py`` in that terminal
-    - Note: Since the exploitation only gets the message in the server's buffer, you need to send requests from the client/browser to the server before run the Heartbleed attack
+    - Note: Since the exploitation only gets the message in the server's buffer, you may need to send requests from the client/browser to the server before running the Heartbleed attack
 
 ## Close the Virtual Machine
-- From command line
+- From the command line where you run **Build Server via Docker**
     - ``ctrl + c`` for Windows or Linux, or ``control + c`` for MacOS
 - From Docker Desktop
     - Click the square button on the right of the compose container ``tls_1_https``
